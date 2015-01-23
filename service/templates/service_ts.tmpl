@@ -1,0 +1,23 @@
+﻿module <%= module %> {
+
+	export interface I<%= className %> {
+		someMethod();
+	}
+
+    /**
+     * Service can be injected as '<%= className %>'
+     */
+    export class <%= className %> implements I<%= className %> {
+        // inject dependencies here
+        static $inject = [];
+
+        constructor() {
+            
+        }
+
+		someMethod() {
+
+		}
+
+    }
+}

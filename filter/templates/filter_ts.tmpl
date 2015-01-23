@@ -1,0 +1,15 @@
+﻿module <%= module %> {
+
+	// you can use this filter like: {{ someExpression | <%= filterName %> }}
+    export class <%= className %> {
+        // inject dependencies here
+        static $inject = [];
+
+		constructor() {
+			return (source: any) => {
+				//place your filter logic here
+			}
+		}
+
+    }
+}

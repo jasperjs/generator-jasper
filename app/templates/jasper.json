@@ -1,0 +1,20 @@
+{
+  "baseCss": [
+    "css/base.css"
+  ],
+  "bootstrapScripts": [
+    "vendor/angularjs/angular.min.js",
+    "vendor/angularjs/angular-route.js",
+    "vendor/angularjs/angular-sanitize.js",
+    "vendor/scriptjs/script.js",
+    "vendor/lodash/lodash.min.js",
+
+    "vendor/jasper/jasper.js",
+
+    "%areas_config%",
+    "%routes_config%",
+
+    "app/bootstrap.js"
+  ]
+
+}
