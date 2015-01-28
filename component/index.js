@@ -37,6 +37,12 @@ module.exports = generators.Base.extend({
                 tagName: this.tagName
             });
 
+        this.copyTpl('component_css.tmpl',
+            path.join(basePath, this.tagName + '.css'),
+            {
+                tagName: this.tagName
+            });
+
         // Creating component view
         this.copyTpl('component.html',
             path.join(basePath, this.tagName + '.html'),

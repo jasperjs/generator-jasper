@@ -5,7 +5,6 @@
 angular.module('app', [
     'ng',
     'ngRoute',
-    'ngSanitize',
     'jasper',
     'jasperAreasConfig',
     'jasperRouteConfig'

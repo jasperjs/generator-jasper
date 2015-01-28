@@ -49,15 +49,21 @@ module.exports = generators.Base.extend({
             'Gruntfile.js',
             {
                 tsFilesMask: this.appPath +  '/**/*.ts',
-                appPath: this.appPath
+                appPath: this.appPath,
+                bootstrapScripts: '<%= jasperPkg.bootstrapScripts %>',
+                baseCss: '<%= jasperPkg.baseCss %>'
             });
 
         this.copyTpl('jasper.json', 'jasper.json')
+        this.copyTpl('typed/jquery.d.ts', 'typed/jquery.d.ts');
+        this.copyTpl('typed/angular.d.ts', 'typed/angular.d.ts');
+
+        this.copyTpl('base.css', 'css/base.css');
+
         this.copyTpl('bootstrap.js', path.join(this.appPath, 'bootstrap.js'));
 
         this.composeWith('jasper:area', { args: ['main'] });
         this.composeWith('jasper:page', { args: ['main', 'home-page', '/'] });
-
     }
 
 });

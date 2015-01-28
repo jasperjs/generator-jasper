@@ -1,6 +1,7 @@
 
 var helpers = require('yeoman-generator').test;
 var assert = require('yeoman-generator').assert;
+var path = require('path');
 
 var testHelpers = require('./helpers');
 
@@ -10,7 +11,7 @@ describe('Jasper application creation tests', function(){
         testHelpers.createApp('test app', done);
     });
 
-    it('index.html assertions', function () {
+    it('Should generate correct index.html file', function () {
 
         assert.file('index.html');
 
@@ -18,12 +19,19 @@ describe('Jasper application creation tests', function(){
         assert.fileContent('index.html', /<!-- SCRIPTS -->([\s\S]*)<!-- \/SCRIPTS -->/gim);
         assert.fileContent('index.html', /<!-- STYLES -->([\s\S]*)<!-- \/STYLES -->/gim);
 
+        assert.fileContent('index.html', /body ng-app=\"app\"/g);
     });
 
-    it('default area configuration', function () {
-
-
-
+    it('Should generate config files', function () {
+        assert.file([   '.yo-rc.json',
+                        'jasper.json',
+                        'gruntfile.js',
+                        'myApp/bootstrap.js',
+                        'typed/angular.d.ts',
+                        'typed/jquery.d.ts',
+                        'css/base.css']);
     });
+
+
 
 });

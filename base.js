@@ -23,6 +23,13 @@ var Generator = module.exports = function Generator() {
             context);
     };
 
+    this.copy = function (from, to, options) {
+        this.fs.copy(
+            this.templatePath(from),
+            this.destinationPath(to),
+            options);
+    };
+
     this.getAreaPath = function(areaName){
         return path.join(this.appPath, areaName);
     };

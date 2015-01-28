@@ -26,7 +26,7 @@ module.exports = function (grunt) {
                     declaration: false,
                     references: [
                         'typed/*.d.ts',
-                        'vendor/jasper/jasper.d.ts'
+                        'node_modules/jasperjs/jasper.d.ts'
                     ]
                 },
                 watch: true
@@ -37,8 +37,8 @@ module.exports = function (grunt) {
             options: {
                 singlePage: 'index.html',
                 appPath: '<%= appPath %>',
-                bootstrapScripts: this.jasperPkg.bootstrapScripts,
-                baseCss: this.jasperPkg.baseCss,
+                bootstrapScripts: '<%= bootstrapScripts %>',
+                baseCss: '<%= baseCss %>',
                 defaultRoutePath: '/',
                 packageOutput: 'dist'
             },
