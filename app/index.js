@@ -44,16 +44,16 @@ module.exports = generators.Base.extend({
         );
 
         /* creating grunt configuration */
-        //this.copyTpl(
-        //    'gruntfile.js',
-        //    'gruntfile.js',
-        //    {
-        //        tsFilesMask: this.appPath +  '/**/*.ts',
-        //        appPath: this.appPath,
-        //        bootstrapScripts: '<%= jasperPkg.bootstrapScripts %>',
-        //        baseCss: '<%= jasperPkg.baseCss %>'
-        //    });
-        //
+        this.copyTpl(
+            'gruntfile.js',
+            'gruntfile.js',
+            {
+                tsFilesMask: this.appPath +  '/**/*.ts',
+                appPath: this.appPath,
+                bootstrapScripts: '<%= jasperPkg.bootstrapScripts %>',
+                baseCss: '<%= jasperPkg.baseCss %>'
+            });
+
         //this.copyTpl('jasper.json', 'jasper.json')
         //this.copyTpl('typed/jquery.d.ts', 'typed/jquery.d.ts');
         //this.copyTpl('typed/angular.d.ts', 'typed/angular.d.ts');
