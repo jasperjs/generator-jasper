@@ -55,8 +55,8 @@ module.exports = generators.Base.extend({
             });
 
         this.copyTpl('jasper.json', 'jasper.json')
-        this.copyTpl('typed/jquery.d.ts', 'typed/jquery.d.ts');
-        this.copyTpl('typed/angular.d.ts', 'typed/angular.d.ts');
+        //this.copyTpl('typed/jquery.d.ts', 'typed/jquery.d.ts');
+        //this.copyTpl('typed/angular.d.ts', 'typed/angular.d.ts');
 
         //this.copyTpl('base.css', 'css/base.css');
         //
