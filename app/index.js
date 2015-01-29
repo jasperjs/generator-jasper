@@ -45,8 +45,8 @@ module.exports = generators.Base.extend({
 
         /* creating grunt configuration */
         this.copyTpl(
-            'Gruntfile.js',
-            'Gruntfile.js',
+            'gruntfile.js',
+            'gruntfile.js',
             {
                 tsFilesMask: this.appPath +  '/**/*.ts',
                 appPath: this.appPath,
