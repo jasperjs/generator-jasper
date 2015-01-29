@@ -42,7 +42,6 @@ module.exports = generators.Base.extend({
 
         // Creating definition file
         this.writeDefinition(basePath, {
-            templateFile: this.attributeName + '.html',
             type: 'decorator',
             ctor: utils.getTSModuleName(this.appModuleName, this.area, 'decorators', tsClassName)
         });
