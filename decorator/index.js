@@ -43,7 +43,7 @@ module.exports = generators.Base.extend({
         // Creating definition file
         this.writeDefinition(basePath, {
             type: 'decorator',
-            ctor: utils.getTSModuleName(this.appModuleName, this.area, 'decorators', tsClassName)
+            ctrl: utils.getTSModuleName(this.appModuleName, this.area, 'decorators', tsClassName)
         });
     }
 

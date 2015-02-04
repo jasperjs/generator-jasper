@@ -52,7 +52,7 @@ module.exports = generators.Base.extend({
         this.writeDefinition(basePath, {
             templateFile: this.tagName + '.html',
             type: 'component',
-            ctor: utils.getTSModuleName(this.appModuleName, this.area, 'components', tsClassName)
+            ctrl: utils.getTSModuleName(this.appModuleName, this.area, 'components', tsClassName)
         });
     }
 
