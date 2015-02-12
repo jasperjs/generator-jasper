@@ -26,9 +26,12 @@ describe('Jasper application creation tests', function(){
         assert.file([   '.yo-rc.json',
                         'jasper.json',
                         'gruntfile.js',
+                        'karma.conf.js',
                         'myApp/bootstrap.js',
                         'typed/angular.d.ts',
+                        'typed/jasmine.d.ts',
                         'typed/jquery.d.ts',
+                        'test/pages.tests.ts',
                         'css/base.css']);
     });
 

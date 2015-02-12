@@ -57,10 +57,22 @@ module.exports = generators.Base.extend({
         this.copyTpl('jasper.json', 'jasper.json')
         this.copyTpl('typed/jquery.d.ts', 'typed/jquery.d.ts');
         this.copyTpl('typed/angular.d.ts', 'typed/angular.d.ts');
+        this.copyTpl('typed/jasmine.d.ts', 'typed/jasmine.d.ts');
+
+        this.copyTpl('test/pages.tests.ts.tmpl', 'test/pages.tests.ts', {
+            appModuleName: this.config.get('appModuleName')
+        });
 
         this.copyTpl('base.css', 'css/base.css');
 
         this.copyTpl('bootstrap.js', path.join(this.appPath, 'bootstrap.js'));
+
+        this.copyTpl(
+            'karma.conf.js',
+            'karma.conf.js',
+            {
+                appPath: this.appPath
+            });
 
         this.composeWith('jasper:area', { args: ['main'] });
         this.composeWith('jasper:page', { args: ['main', 'home-page', '/'] });

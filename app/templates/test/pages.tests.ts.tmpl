@@ -1,0 +1,14 @@
+module <%= appModuleName %>.tests {
+    describe('Page tests', () => {
+
+        beforeEach(() => {
+
+        });
+
+        it('Test home page title', () => {
+            var page = new main.pages.HomePage();
+            expect(page.name).toEqual('home-page');
+        });
+
+    });
+}

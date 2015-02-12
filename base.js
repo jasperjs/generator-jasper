@@ -14,7 +14,7 @@ var Generator = module.exports = function Generator() {
             throw 'Configuration of application not found';
         }
 
-    }
+    };
 
     this.copyTpl = function (from, to, context) {
         this.fs.copyTpl(
