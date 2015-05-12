@@ -59,7 +59,7 @@ module.exports = generators.Base.extend({
         this.copyTpl('typed/angular.d.ts', 'typed/angular.d.ts');
         this.copyTpl('typed/jasmine.d.ts', 'typed/jasmine.d.ts');
 
-        this.copyTpl('test/pages.tests.ts.tmpl', 'test/pages.tests.ts', {
+        this.copyTpl('test-env/pages.tests.ts.tmpl', 'test/pages.tests.ts', {
             appModuleName: this.config.get('appModuleName')
         });
 
