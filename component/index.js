@@ -52,6 +52,8 @@ module.exports = generators.Base.extend({
         this.writeDefinition(basePath, {
             templateFile: this.tagName + '.html',
             type: 'component',
+            properties: '',
+            events: '',
             ctrl: utils.getTSModuleName(this.appModuleName, this.area, 'components', tsClassName)
         });
     }
