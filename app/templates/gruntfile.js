@@ -56,6 +56,7 @@ module.exports = function (grunt) {
 
             debug: {
                 options: {
+                    baseHref: '/jasper-application/',
                     package: false
                 }
             },
