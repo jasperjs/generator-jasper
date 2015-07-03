@@ -83,7 +83,7 @@ module.exports = function (grunt) {
     /**
      * Task builds jasper-application
      */
-    grunt.registerTask('default', ['typescript', 'jasper:debug']);
+    grunt.registerTask('default', ['typescript:base', 'jasper:debug']);
 
     /**
      * Task test the application
