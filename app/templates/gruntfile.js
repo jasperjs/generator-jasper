@@ -48,7 +48,8 @@ module.exports = function (grunt) {
             options: {
                 singlePage: 'index.html',
                 appPath: '<%= appPath %>',
-                bootstrapScripts: '<%= bootstrapScripts %>',
+                baseScripts: '<%= baseScripts %>',
+                startup: '<%= startup %>',
                 baseCss: '<%= baseCss %>',
                 defaultRoutePath: '/',
                 packageOutput: 'dist'

@@ -50,7 +50,8 @@ module.exports = generators.Base.extend({
             {
                 tsFilesMask: this.appPath +  '/**/*.ts',
                 appPath: this.appPath,
-                bootstrapScripts: '<%= jasperPkg.bootstrapScripts %>',
+                baseScripts: '<%= jasperPkg.baseScripts %>',
+                startup: '<%= jasperPkg.startup %>',
                 baseCss: '<%= jasperPkg.baseCss %>'
             });
 
