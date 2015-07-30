@@ -29,6 +29,11 @@ module.exports = generators.Base.extend({
 
     main: function () {
 
+        var getRandomPort = function(){
+            var min = 8080, max = 8090;
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        };
+
         this.appPath = this.appPath || 'app';
 
         this.config.set('appModuleName', this.appModuleName || 'spa');
@@ -52,7 +57,8 @@ module.exports = generators.Base.extend({
                 appPath: this.appPath,
                 baseScripts: '<%= jasperPkg.baseScripts %>',
                 startup: '<%= jasperPkg.startup %>',
-                baseCss: '<%= jasperPkg.baseCss %>'
+                baseCss: '<%= jasperPkg.baseCss %>',
+                jDebugEnabled: '<%= jasperPkg.jDebug.enabled %>',
             });
 
         this.copyTpl('jasper.json', 'jasper.json')
@@ -74,6 +80,10 @@ module.exports = generators.Base.extend({
             {
                 appPath: this.appPath
             });
+
+        this.copyTpl('server.js', 'server.js',{
+            port: getRandomPort()
+        });
 
         this.composeWith('jasper:area', { args: ['main'] });
         this.composeWith('jasper:page', { args: ['main', 'home-page', '/'] });

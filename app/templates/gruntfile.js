@@ -33,7 +33,8 @@ module.exports = function (grunt) {
                 references: [
                     'typed/*.d.ts',
                     'node_modules/jasperjs/jasper.d.ts'
-                ]
+                ],
+                generateTsConfig: true
             },
             base: {
                 src: [ '<%= tsFilesMask %>'],
@@ -52,12 +53,12 @@ module.exports = function (grunt) {
                 startup: '<%= startup %>',
                 baseCss: '<%= baseCss %>',
                 defaultRoutePath: '/',
-                packageOutput: 'dist'
+                packageOutput: 'dist',
+                jDebugEnabled: '<%= jDebugEnabled %>'
             },
 
             debug: {
                 options: {
-                    baseHref: '/jasper-application/',
                     package: false
                 }
             },
