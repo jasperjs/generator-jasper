@@ -1,6 +1,6 @@
 var express = require('express'),
     app = express(),
-    port = process.env.PORT || <%= port =>;
+    port = process.env.PORT || <%= port %>;
 
 var http = require('http');
 var fs = require('fs');

@@ -81,12 +81,12 @@ module.exports = generators.Base.extend({
                 appPath: this.appPath
             });
 
-        this.copyTpl('server.js', 'server.js',{
-            port: getRandomPort()
+        this.copyTpl('server.js', 'server.js', {
+            port: getRandomPort().toString()
         });
 
-        this.composeWith('jasper:area', { args: ['main'] });
-        this.composeWith('jasper:page', { args: ['main', 'home-page', '/'] });
+        this.composeWith('jasper:area', { args: ['core'] });
+        this.composeWith('jasper:page', { args: ['core', 'home-page', '/'] });
     }
 
 });
