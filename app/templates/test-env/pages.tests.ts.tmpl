@@ -1,9 +1,9 @@
 module <%= appModuleName %>.tests {
     describe('Home page', () => {
-        var page: main.pages.HomePage; // object to test
+        var page: core.pages.HomePage; // object to test
 
         beforeEach(() => {
-            page = new main.pages.HomePage();
+            page = new core.pages.HomePage();
         });
 
         it('should has special title', () => {
