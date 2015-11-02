@@ -8,10 +8,15 @@
     "node_modules/scriptjs/dist/script.js",
     "node_modules/jasperjs/jasper.js"
   ],
+
+  "jDebugEnabled":true,
+
+  "values": "config/debug.json",
   "startup": "app/bootstrap.js",
-
-  "jDebug":{
-    "enabled": true
-  }
-
+  "singlePage": "index.html",
+  "appPath": "app",
+  "defaultRoutePath": "/",
+  "packageOutput": "dist",
+  "fileVersion": true,
+  "baseHref": "/"
 }

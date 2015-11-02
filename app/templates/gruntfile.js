@@ -6,11 +6,6 @@
  */
 
 module.exports = function (grunt) {
-    grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-clean');
-
     grunt.loadNpmTasks('grunt-typescript');
     grunt.loadNpmTasks('grunt-jasper');
     grunt.loadNpmTasks('grunt-karma');
@@ -46,23 +41,12 @@ module.exports = function (grunt) {
         },
         /** more about grunt-jasper build properties here - https://github.com/jasperjs/grunt-jasper */
         jasper: {
-            options: {
-                singlePage: 'index.html',
-                appPath: '<%= appPath %>',
-                baseScripts: '<%= baseScripts %>',
-                startup: '<%= startup %>',
-                baseCss: '<%= baseCss %>',
-                defaultRoutePath: '/',
-                packageOutput: 'dist',
-                jDebugEnabled: '<%= jDebugEnabled %>'
-            },
-
+            options: grunt.file.readJSON('jasper.json'),
             debug: {
                 options: {
                     package: false
                 }
             },
-
             release: {
                 options: {
                     package: true
